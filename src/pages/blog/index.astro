@@ -10,18 +10,20 @@ const allPosts = await Astro.glob("./posts/*.md");
   <main
     class="flex items-center justify-center py-10 px-5 text-gray-400 md:py-20"
   >
-    <div class="container">
+    <div class="max-w-screen-lg w-full mx-auto">
       <div class="text-center">
         <h1 class="text-4xl font-bold text-white md:text-6xl">Blog post</h1>
       </div>
       <div class="mt-12 md:mt-20 md:text-lg">
-        <ul>
+        <ul class="list-disc">
           {
             allPosts.map((post) => (
               <li>
-                <a href={post.url} class="underline underline-offset-4">
-                  {post.frontmatter.pubDate.toLocaleString()} -{" "}
-                  {post.frontmatter.title}
+                <a
+                  href={post.url}
+                  class="underline underline-offset-4 text-white text-xl transition-all hover:text-purple-500"
+                >
+                  {post.frontmatter.pubDate} - {post.frontmatter.title}
                 </a>
               </li>
             ))
@@ -30,5 +32,5 @@ const allPosts = await Astro.glob("./posts/*.md");
       </div>
     </div>
   </main>
-  <Footer addStyle="self-auto" />
+  <Footer addStyle="absolute right-0 left-0 bottom-0" />
 </Layout>

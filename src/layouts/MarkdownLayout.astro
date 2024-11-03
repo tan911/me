@@ -15,12 +15,14 @@ const { frontmatter } = Astro.props;
           {frontmatter.title}
         </h1>
         <span class="text-gray-400 text-md italic"
-          >Questionably written by {frontmatter.author} on {
-            frontmatter.pubDate
-          }</span
+          >Poorly written by {frontmatter.author} on {frontmatter.pubDate}</span
         >
       </div>
-      <div class="container text-white text-base">
+      <div class="py-5"></div>
+      <div
+        class="container mx-auto prose prose-p:text-white prose-p:text-xl prose-h2:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:md:text-3xl
+        prose-em:text-sm prose-em:text-purple-500 prose-a:font-medium prose-a:text-purple-500 prose-a:underline prose-a:underline-offset-4 prose-a:tracking-wide"
+      >
         <slot />
       </div>
     </div>
