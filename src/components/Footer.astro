@@ -1,0 +1,22 @@
+---
+interface Props {
+  addStyle?: string;
+}
+
+const { addStyle } = Astro.props;
+---
+
+<footer
+  class={`flex items-center justify-center py-10 px-5 md:mt-auto ${addStyle}`}
+>
+  <div class="text-center container">
+    <p class="text-gray-500 py-1.5">
+      jovanlanutansite &copy; 2024 <span class="text-gray-500 mr-2">by</span><a
+        href="https://github.com/tan911"
+        class="px-1.5 py-1 font-regular bg-purple-600 text-sm text-white rounded-md hover:bg-purple-800 transition-all"
+        target="_blank">@bossing</a
+      >
+    </p>
+    <p class="text-gray-500 mt-2">Made with ❤ on Earth</p>
+  </div>
+</footer>

@@ -1,0 +1,29 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <Navigation />
+  <main class="flex items-center justify-center py-10 px-5 md:py-20">
+    <div>
+      <div class="text-center mb-10">
+        <h1 class="text-5xl text-white font-bold mb-10 md:text-6xl">
+          {frontmatter.title}
+        </h1>
+        <span class="text-gray-400 text-md italic"
+          >Questionably written by {frontmatter.author} on {
+            frontmatter.pubDate
+          }</span
+        >
+      </div>
+      <div class="container text-white text-base">
+        <slot />
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

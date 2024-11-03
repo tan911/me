@@ -1,26 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Jovan Lanutan">
-  <header class="w-full flex items-center justify-center py-1.5 px-3">
-    <nav class="max-w-lg w-full">
-      <ul class="flex items-center justify-center gap-3">
-        <li class="text-gray-400">
-          <a href="/" class="block p-3 text-lg hover:text-white">Home</a>
-        </li>
-        <li class="text-gray-400">
-          <a
-            href="https://github.com/tan911"
-            class="block p-3 text-lg hover:text-white">Github</a
-          >
-        </li>
-        <li class="text-gray-400">
-          <a href="/" class="block p-3 text-lg hover:text-white">Projects</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <Navigation />
   <main class="flex items-center justify-center py-10 px-5 md:py-20">
     <div class="container">
       <div
@@ -38,13 +23,13 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="mt-12 md:mt-20 md:text-lg">
         <ul class="text-gray-400">
-          <li class="mt-2">
+          <li class="mt-2 tracking-tight">
             - Exploring as always! Yes, <span
               class="font-bold bg-gradient-to-b from-amber-50 to-purple-500 bg-clip-text text-transparent sm:leading-tight"
               >Always.</span
             >
           </li>
-          <li class="mt-2">
+          <li class="mt-2 tracking-tight">
             - <span class="font-bold">Sometimes</span> I write a few lines of code
             in seconds. <blockquote>
               <em class="tracking-wide"
@@ -53,23 +38,18 @@ import Layout from "../layouts/Layout.astro";
               >
             </blockquote>
           </li>
+          <li class="mt-2 tracking-tight">
+            - If you're here for fancy designs portfolio and polished "About"
+            sections, you might be in the wrong place! But feel free to explore
+            all the nonsense I've shared <a
+              href="/blog"
+              class="underline underline-offset-2 text-base text-purple-400 hover:text-purple-500 transition-all"
+              >(here)</a
+            >.
+          </li>
         </ul>
       </div>
     </div>
   </main>
-
-  <footer
-    class="absolute bottom-0 left-0 right-0 flex items-center justify-center py-10 px-5 md:mt-auto"
-  >
-    <div class="text-center container">
-      <p class="text-gray-500 py-1.5">
-        jovanlanutansite &copy; 2024 <span class="text-gray-500 mr-2">by</span
-        ><a
-          href="https://github.com/tan911"
-          class="px-1.5 py-1 font-regular bg-purple-600 text-sm text-white rounded-md hover:bg-purple-800 transition-all"
-          target="_blank">@bossing</a>
-      </p>
-      <p class="text-gray-500 mt-2">Made with ❤ on Earth</p>
-    </div>
-  </footer>
+  <Footer addStyle="absolute right-0 left-0 bottom-0" />
 </Layout>
