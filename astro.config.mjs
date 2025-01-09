@@ -8,7 +8,5 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
-  adapter: vercel({
-    imageService: true,
-  }),
+  adapter: vercel(),
 });
