@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Avatar from "../images/avatar.webp";
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
@@ -14,8 +13,8 @@ import Footer from "../components/Footer.astro";
         class="flex items-center justify-center flex flex-col gap-3 md:flex-row md:gap-0 md:justify-around"
       >
         <div class="relative w-52 h-52 rounded-full overflow-hidden border-2">
-          <Image
-            src={Avatar}
+          <img
+            src={Avatar.src}
             alt="Castring Avatar"
             class="absolute object-contain inset-0 w-full"
           />
