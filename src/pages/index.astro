@@ -1,5 +1,8 @@
 ---
-import Avatar from "../images/avatar.webp";
+import AvatarMobile from "../images/avatar480x600.webp";
+import AvatarTablet from "../images/avatar768x960.webp";
+import AvatarLaptop from "../images/avatar1024x1280.webp";
+import AvatarDesktop from "../images/avatar1920x2400.webp";
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
@@ -14,9 +17,16 @@ import Footer from "../components/Footer.astro";
       >
         <div class="relative w-52 h-52 rounded-full overflow-hidden border-2">
           <img
-            src={Avatar.src}
+            src={AvatarMobile.src}
+            srcset={`${AvatarMobile.src} 480w, ${AvatarTablet.src} 768w, ${AvatarLaptop.src} 1024w, ${AvatarDesktop.src} 1920w`}
             alt="Castring Avatar"
-            class="absolute object-contain inset-0 w-full"
+            class="absolute object-cover object-center w-full h-auto inset-0 m-auto"
+            sizes="(max-width: 480px) 100vw, 
+           (max-width: 768px) 75vw, 
+           (max-width: 1024px) 100vw, 
+           33vw"
+            width="480"
+            height="600"
           />
         </div>
         <div class="text-center">
