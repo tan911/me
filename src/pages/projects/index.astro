@@ -2,9 +2,15 @@
 import Layout from "../../layouts/Layout.astro";
 import Navigation from "../../components/Navigation.astro";
 import Footer from "../../components/Footer.astro";
+
+const pathName = Astro.url.pathname;
 ---
 
-<Layout title="Jovan's projects">
+<Layout
+  title="Jovan's projects"
+  description="See my projects, like websites, apps, and tools. Each one shows my skills and how I solve problems in creative ways."
+  path={pathName}
+>
   <Navigation />
   <main
     class="flex items-center justify-center py-10 px-5 text-gray-400 md:py-20"

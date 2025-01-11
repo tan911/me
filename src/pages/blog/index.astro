@@ -3,9 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import Navigation from "../../components/Navigation.astro";
 import Footer from "../../components/Footer.astro";
 const allPosts = await Astro.glob("./posts/*.md");
+const pathName = Astro.url.pathname;
 ---
 
-<Layout title="All my thought's here are personal">
+<Layout
+  title="All my thought's here are personal"
+  description="Check out my blog! I share coding tips, project updates, and lessons I've learned as a developer."
+  path={pathName}
+>
   <Navigation />
   <main
     class="flex items-center justify-center py-10 px-5 text-gray-400 md:py-20"
