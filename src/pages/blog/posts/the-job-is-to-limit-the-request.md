@@ -15,6 +15,9 @@ The big problem was the API rate limits. Like most APIs, the services we used on
 
 ## First Try: Moving to the Server
 
+![A request and response cycle with external services.](../../../images/First%20try800.png)
+_A visualization of request & response cycle with external API services_
+
 To fix this, I moved the code to the server. This meant the server would fetch data from the APIs and then send it to the client (the website). But the problem didn’t go away—every request to the server still made a new API call, which quickly used up our allowed requests.
 
 ## Learning About Caching
